@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import { SiTypescript, SiJavascript, SiCss3, SiPython } from "react-icons/si";
 import axios from "axios";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface userData {
   name: string;
@@ -57,14 +58,18 @@ export default function Home() {
   });
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="flex  justify-between w-2/3 h-1/2">
+    <div className="flex justify-center items-center h-screen ">
+      <div className="flex justify-between w-2/3 h-1/2">
         <div className="relative">
-          <div className="h-1/2 fixed">
+          <div className="h-1/2 fixed ">
             <Navbar />
           </div>
         </div>
-        <div className="flex flex-col group-hover:bg-black  gap-3 h-full">
+
+        <div
+          className="flex flex-col group-hover:bg-black gap-3 h-max pb-64"
+          id="projetos"
+        >
           <h1 className="text-1xl font-semibold">Projetos</h1>
           {repoData?.map((repo: any) => (
             <CardWorks
@@ -87,9 +92,12 @@ export default function Home() {
               title={repo.full_name}
               desc={repo.description}
               stars={repo.stargazers_count}
-              className="group"
+              className="group rounded-md"
             />
           ))}
+          <div id="sobre">
+            <h1 className="text-1xl font-semibold">TDADADAechs</h1>
+          </div>
         </div>
       </div>
     </div>

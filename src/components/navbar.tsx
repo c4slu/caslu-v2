@@ -6,6 +6,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import SmoothScrollLink from "./anchor";
 export default function Navbar() {
   return (
     <div className="flex h-full">
@@ -27,12 +28,18 @@ export default function Navbar() {
           <div className="w-[1px] blur-[3px] animate-pulse h-14 bg-white"></div>
           <div className="w-[1px] absolute h-14 bg-white"></div>
           <ul className="text-xs flex gap-5 flex-col font-bold">
-            <li className="hover:text-white relative transform hover:translate-x-5 transition-transform cursor-pointer">
-              PROJETOS
-            </li>
-            <li className="hover:text-white relative transform hover:translate-x-5 transition-transform cursor-pointer">
-              SOBRE
-            </li>
+            <SmoothScrollLink to="projetos">
+              <li className="hover:text-white w-full group relative transform hover:translate-x-12 transition-transform cursor-pointer p-3">
+                <span className="h-[1px] ml-6 w-6 bg-none transition-transform absolute top-2 -left-10 group-hover:-translate-x-5 delay-50 group-hover:bg-white"></span>
+                PROJETOS
+              </li>
+            </SmoothScrollLink>
+            <SmoothScrollLink to="sobre">
+              <li className="hover:text-white content group relative transform hover:translate-x-12 transition-transform cursor-pointer p-3 ">
+                <span className="h-[1px] ml-6 w-6 bg-none transition-transform absolute top-2 -left-10 group-hover:-translate-x-5 delay-50 group-hover:bg-white"></span>
+                SOBRE
+              </li>
+            </SmoothScrollLink>
           </ul>
         </div>
         <div>
