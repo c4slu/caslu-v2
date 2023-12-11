@@ -30,7 +30,7 @@ export default function Home() {
   const [repoData, setRepoData] = useState<repo[] | null>(null);
   const [avatar, setAvatar] = useState("")
   const [scrolled, setScrolled] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const username = process.env.NEXT_PUBLIC_USERNAME;
 
@@ -93,11 +93,11 @@ export default function Home() {
 
           <div className="relative">
 
-            <motion.div
+            <div
 
               className="h-1/2 fixed">
               <Navbar />
-            </motion.div>
+            </div>
           </div>
           {loading ? (
             <div className="w-full flex flex-col justify-center items-center">
@@ -116,7 +116,7 @@ export default function Home() {
                   key={index}
                   initial={{ opacity: 0, x: 70 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 70 }}
+                  // exit={{ opacity: 0, x: 70 }}
                   transition={
                     {
                       ease: [0, 0.71, 0.2, 1.01],
