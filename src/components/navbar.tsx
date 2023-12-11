@@ -6,12 +6,21 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "framer-motion"
 import SmoothScrollLink from "./anchor";
 export default function Navbar() {
   return (
     <div className="flex h-full">
       <div className="flex justify-between flex-col">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
           <h1 className="text-2xl font-bold">Lucas Rodrigues</h1>
           <h2 className="text-sm font-semibold">Software Engineer</h2>
           <div className="mt-5">
@@ -23,8 +32,18 @@ export default function Navbar() {
               <strong className="text-white">SQL</strong>.
             </p>
           </div>
-        </div>
-        <div className="flex items-center gap-4 text-muted-foreground  pl-3 ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+          className="flex items-center gap-4 text-muted-foreground  pl-3 "
+        >
+
           <div className="w-[1px] blur-[3px] animate-pulse h-28 bg-white"></div>
           <div className="w-[1px] absolute h-28 bg-white"></div>
           <ul className="text-[10px] flex gap-1 flex-col font-bold">
@@ -44,8 +63,15 @@ export default function Navbar() {
               </li>
             </SmoothScrollLink>
           </ul>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}>
           <ul className="flex gap-3 text-sm items-center">
             <a href="https://github.com/c4slu" target="_blank">
               <TooltipProvider>
@@ -77,7 +103,7 @@ export default function Navbar() {
               </li>
             </a>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

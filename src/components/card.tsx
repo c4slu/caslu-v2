@@ -21,6 +21,24 @@ interface CardProps {
   link?: string;
 }
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion"
+
+const variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
+    }
+  }
+};
 
 export default function CardWorks({
   framework,
@@ -32,11 +50,13 @@ export default function CardWorks({
   link,
 }: CardProps) {
   return (
-    <main>
+    <motion.main
+
+    >
       <a href={link} target="_blank">
         <Card
           className={cn(
-            "bg-[#0e0e0f] hover:bg-black w-[30rem] h-40 rounded-none flex justify-center flex-col hover:scale-105 transition cursor-pointer",
+            "bg-[#0e0e0f] hover:bg-black h-40 rounded-none flex justify-center flex-col hover:scale-105 transition cursor-pointer",
             className
           )}
         >
@@ -54,6 +74,6 @@ export default function CardWorks({
           </CardHeader>
         </Card>
       </a>
-    </main>
+    </motion.main >
   );
 }
