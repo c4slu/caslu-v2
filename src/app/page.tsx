@@ -50,7 +50,7 @@ export default function Home() {
       const getUserData = async () => {
         try {
           const response = await axios.get(
-            `https://api.github.com/users/${username}`
+            `https://api.github.com/users/c4slu`
           );
           setUserData(response.data);
           setLoading(false)
@@ -63,7 +63,7 @@ export default function Home() {
       const getReposData = async () => {
         try {
           const response = await axios.get(
-            `https://api.github.com/users/${username}/repos`
+            `https://api.github.com/users/c4slu/repos`
           );
           const pinnedRepos = response.data.filter(
             (repo: any) => repo.description
