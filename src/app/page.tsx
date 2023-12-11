@@ -25,7 +25,7 @@ interface repo {
   avatar_url: string;
 }
 
-export default function Home({ avatar_url }: repo) {
+export default function Home() {
   const [userData, setUserData] = useState<userData | null>(null);
   const [repoData, setRepoData] = useState<repo[] | null>(null);
   const [avatar, setAvatar] = useState("")
