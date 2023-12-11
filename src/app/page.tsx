@@ -57,6 +57,7 @@ export default function Home() {
           setAvatar(response.data.avatar_url)
         } catch (error) {
           console.error("Erro na requisição:", error);
+          setLoading(false)
         }
       };
       const getReposData = async () => {
@@ -72,6 +73,7 @@ export default function Home() {
           setLoading(false)
         } catch (error) {
           console.error("Erro na requisição:", error);
+          setLoading(false)
         }
       };
       getUserData();
