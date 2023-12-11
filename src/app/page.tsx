@@ -30,7 +30,7 @@ export default function Home() {
   const [repoData, setRepoData] = useState<repo[] | null>(null);
   const [avatar, setAvatar] = useState("")
   const [scrolled, setScrolled] = useState(false);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const username = process.env.NEXT_PUBLIC_USERNAME;
 
