@@ -36,7 +36,7 @@ export default function CardWorks({
       <a href={link} target="_blank">
         <Card
           className={cn(
-            "bg-[#0e0e0f] hover:bg-black w-[550px] h-48 rounded-none flex justify-center flex-col hover:scale-105 transition cursor-pointer",
+            "bg-[#0e0e0f] hover:bg-black w-[30rem] h-40 rounded-none flex justify-center flex-col hover:scale-105 transition cursor-pointer",
             className
           )}
         >
@@ -45,8 +45,8 @@ export default function CardWorks({
               {icon}
               {framework}
             </CardTitle>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{desc}</CardDescription>
+            <CardTitle className="text-base font-normal">{title}</CardTitle>
+            <CardDescription className="text-xs">{desc}</CardDescription>
             <CardDescription className="flex gap-2 items-center ">
               <Star width={15} />
               {stars}
