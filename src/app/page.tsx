@@ -42,42 +42,31 @@ export default function Home() {
       setScrolled(isScrolled);
     };
 
+    const getReposData = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.github.com/users/c4slu/repos`
+        );
+        const pinnedRepos = response.data.filter(
+          (repo: any) => repo.description
+        );
+
+        setRepoData(pinnedRepos);
+        setLoading(false)
+      } catch (error) {
+        console.error("Erro na requisição:", error);
+        setLoading(false)
+      }
+    };
+    getReposData();
+
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
 
-      const getUserData = async () => {
-        try {
-          const response = await axios.get(
-            `https://api.github.com/users/c4slu`
-          );
-          setUserData(response.data);
-          setLoading(false)
-          setAvatar(response.data.avatar_url)
-        } catch (error) {
-          console.error("Erro na requisição:", error);
-          setLoading(false)
-        }
-      };
-      const getReposData = async () => {
-        try {
-          const response = await axios.get(
-            `https://api.github.com/users/c4slu/repos`
-          );
-          const pinnedRepos = response.data.filter(
-            (repo: any) => repo.description
-          );
 
-          setRepoData(pinnedRepos);
-          setLoading(false)
-        } catch (error) {
-          console.error("Erro na requisição:", error);
-          setLoading(false)
-        }
-      };
-      getUserData();
-      getReposData();
     };
   });
 
