@@ -11,7 +11,7 @@ import SmoothScrollLink from "./anchor";
 export default function Navbar() {
   return (
     <div className="flex h-full">
-      <div className="flex justify-between flex-col">
+      <div className="flex justify-between flex-col gap-10 xl:gap-0 md:gap-0">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -41,7 +41,7 @@ export default function Navbar() {
             delay: 0,
             ease: [0, 0.71, 0.2, 1.01]
           }}
-          className="flex items-center gap-4 text-muted-foreground  pl-3 "
+          className="flex items-center gap-5 text-muted-foreground  pl-3 "
         >
 
           <div className="w-[1px] blur-[3px] animate-pulse h-28 bg-white"></div>
