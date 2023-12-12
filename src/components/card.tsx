@@ -65,7 +65,7 @@ export default function CardWorks({
               {icon}
               {framework}
             </CardTitle>
-            <CardTitle className="text-base font-normal">{title}</CardTitle>
+            <CardTitle className="xl:text-base md:text-base text-sm font-normal">{title}</CardTitle>
             <CardDescription className="text-xs">{desc}</CardDescription>
             <CardDescription className="flex gap-2 items-center ">
               <Star width={15} />
