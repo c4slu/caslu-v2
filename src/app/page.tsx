@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           ) : (
             <div
-              className={`flex flex-col xl:mt-0 md:mt-0 mt-16 group-hover:bg-black gap-y-3 h-max xl:w-1/2 md:w-1/2 w-2/3`}
+              className={`flex flex-col xl:mt-0 md:mt-0 mt-16 group-hover:bg-black gap-y-3 h-max xl:w-1/2 md:w-1/2 w-5/6`}
               id="projetos"
             >
               <h1 className="text-1xl font-semibold">Projetos</h1>
