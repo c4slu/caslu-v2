@@ -3,12 +3,7 @@
 import CardWorks from "@/components/card";
 import Navbar from "@/components/navbar";
 import { useEffect, useState } from "react";
-import {
-  SiTypescript,
-  SiJavascript,
-  SiCss3,
-  SiPython,
-} from "react-icons/si";
+import { SiTypescript, SiJavascript, SiCss3, SiPython } from "react-icons/si";
 import axios from "axios";
 import CardCarrer from "@/components/cardCarrer";
 import { motion } from "framer-motion";
@@ -73,10 +68,11 @@ export default function Home() {
   return (
     <main className="">
       <div
-        className={`flex w-screen fixed h-24 abolute top-0 ${scrolled
-          ? "bg-gradient-to-t from-transparent to-black"
-          : "bg-transparent"
-          }`}
+        className={`flex w-screen fixed h-24 abolute top-0 ${
+          scrolled
+            ? "bg-gradient-to-t from-transparent to-black"
+            : "bg-transparent"
+        }`}
       ></div>
       <div className={`flex justify-center items-center h-screen `}>
         <div className="xl:flex xl:flex-row md:flex-row md:flex flex flex-col xl:justify-between md:justify-between md:w-5/6 xl:w-5/6 md:h-1/2 xl:h-1/2 h-full mt-20 items-center xl:items-start md:items-start">
@@ -180,20 +176,58 @@ export default function Home() {
                 <h1 id="sobre" className="text-1xl font-semibold mb-3">
                   Sobre
                 </h1>
-                <div className="flex xl:flex-row md:flex-col flex-col xl:items-start items-center gap-5 mb-20 bg-[#0e0e0f] border p-5 rounded-lg">
-                  <img
-                    className="bg-cover rounded-lg xl:w-1/2 md:w-2/3 w-full h-full"
-                    src="https://github.com/c4slu.png?.png"
-                    alt=""
-                  />
-                  <p className="text-xs text-muted-foreground">
-                    Me chamo <strong className="text-white font-normal">Lucas Rodrigues</strong>, tenho 21 anos. Graduado em Design Gráfico pela UAM.
+                <div className="flex flex-col justify-center items-center gap-5 mb-20 bg-[#0e0e0f] border p-5 rounded-lg">
+                  <div className="flex gap-0.5">
+                    <img
+                      className="bg-cover rounded-lg w-1/2 h-full"
+                      src="https://github.com/c4slu.png?.png"
+                      alt=""
+                    />
+                    <img
+                      className="bg-cover rounded-lg w-1/2 h-full"
+                      src="/avatar.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground ">
+                    Meu nome é{" "}
+                    <strong className="text-white font-normal">
+                      Lucas Rodrigues
+                    </strong>
+                    , tenho 22 anos e sou formado em Design Gráfico pela UAM.
                     <br />
                     <br />
-                    Sou um Analista de Dados com mais de <strong className="text-white font-normal">3 anos de experiência na área</strong>, atuando em nível pleno. Tenho ampla experiência como Software Engineer, com habilidades na criação de dashboards, páginas para extração e importação de dados em banco SQL Server, e desenvolvimento de landing pages, incluindo sites pessoais.
+                    Atualmente, atuo como Analista de Dados com mais de
+                    <strong className="text-white font-normal">
+                      3 anos de experiência na área
+                    </strong>
+                    . Tenho desenvolvido habilidades sólidas em análise de
+                    dados, especialmente em manipulação e visualização, além de
+                    contribuir para a criação de soluções eficazes.
                     <br />
                     <br />
-                    Possuo conhecimento avançado nas seguintes linguagens: <strong className="text-white font-normal">JavaScript, TypeScript, HTML, CSS, DAX, Python e SQL/MySQL</strong>. Minha experiência me permite lidar com análise de dados complexos e desenvolvimento de soluções eficientes.
+                    Minha experiência abrange diversas áreas, incluindo{" "}
+                    <strong className="text-white font-normal">
+                      desenvolvimento de dashboards interativos e intuitivos
+                    </strong>{" "}
+                    para apresentação de insights de dados de forma acessível.
+                    Além disso, possuo expertise em automação de processos
+                    utilizando ferramentas como{" "}
+                    <strong className="text-white font-normal">Selenium</strong>
+                    , para a coleta de dados de fontes diversas, e{" "}
+                    <strong className="text-white font-normal">
+                      requisição de APIs
+                    </strong>{" "}
+                    para integrar informações de sistemas externos.
+                    <br />
+                    <br />
+                    Também tenho conhecimento avançado em linguagens como{" "}
+                    <strong className="text-white font-normal">
+                      JavaScript, TypeScript, HTML, CSS, DAX, Python e SQL/MySQL
+                    </strong>
+                    . O que me permite lidar com análise de dados complexos e
+                    desenvolver soluções eficientes para os desafios que surgem
+                    no dia a dia.
                     <br />
                   </p>
                 </div>

@@ -6,19 +6,19 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import SmoothScrollLink from "./anchor";
 export default function Navbar() {
   return (
     <div className="flex h-full">
-      <div className="flex justify-between flex-col gap-10 xl:gap-0 md:gap-0">
+      <div className="flex justify-between flex-col gap-10 xl:gap-4 md:gap-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
             delay: 0.2,
-            ease: [0, 0.71, 0.2, 1.01]
+            ease: [0, 0.71, 0.2, 1.01],
           }}
         >
           <h1 className="text-2xl font-bold">Lucas Rodrigues</h1>
@@ -39,11 +39,10 @@ export default function Navbar() {
           transition={{
             duration: 0.8,
             delay: 0,
-            ease: [0, 0.71, 0.2, 1.01]
+            ease: [0, 0.71, 0.2, 1.01],
           }}
           className="flex items-center gap-5 text-muted-foreground  pl-3 "
         >
-
           <div className="w-[1px] blur-[3px] animate-pulse h-28 bg-white"></div>
           <div className="w-[1px] absolute h-28 bg-white"></div>
           <ul className="text-[10px] flex gap-1 flex-col font-bold">
@@ -70,8 +69,9 @@ export default function Navbar() {
           transition={{
             duration: 0.8,
             delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01]
-          }}>
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <ul className="flex gap-3 text-sm items-center">
             <a href="https://github.com/c4slu" target="_blank">
               <TooltipProvider>
